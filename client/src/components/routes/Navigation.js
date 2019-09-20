@@ -14,7 +14,7 @@ function Navigation() {
 				<Link to='/bubblepage'>Bubble Page</Link>
                 <Link to='/bubbles'>Bubbles</Link>
 				<Link to='/colorlist'>Color List</Link>
-				<button onClick={handleLogout}>Logout</button>
+				<button className='logout' onClick={handleLogout}>Logout</button>
 			</nav>
 		</div>
 	);

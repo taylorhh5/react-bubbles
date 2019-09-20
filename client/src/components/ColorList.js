@@ -12,6 +12,8 @@ const ColorList = ({ colors, updateColors }) => {
   const [editing, setEditing] = useState(false);
   const [colorToEdit, setColorToEdit] = useState(initialColor);
 
+
+
   const editColor = color => {
     setEditing(true);
     setColorToEdit(color);
@@ -23,8 +25,9 @@ const ColorList = ({ colors, updateColors }) => {
     // think about where will you get the id from...
     // where is is saved right now?
   };
+  
 
-  const deleteColor = (id) => {
+  const deleteColor = (colors) => {
     axios .delete(`/api/colors/${colors.id}`)
     .then((response) => {
         console.log(response, "res from colorlist delete")
